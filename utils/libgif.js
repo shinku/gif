@@ -482,9 +482,9 @@ function ImageData(array,_w,_h){
         var frameOffsets = []; // elements have .x and .y properties
 
         var gif = options.gif;
-        if (typeof options.auto_play == 'undefined')
-            options.auto_play = (!gif.getAttribute('rel:auto_play') || gif.getAttribute('rel:auto_play') == '1');
-
+        // if (typeof options.auto_play == 'undefined')
+        // options.auto_play = (!gif.getAttribute('rel:auto_play') || gif.getAttribute('rel:auto_play') == '1');
+        options.auto_play = options.auto_play || true;
         var onEndListener = (options.hasOwnProperty('on_end') ? options.on_end : null);
         var loopDelay = (options.hasOwnProperty('loop_delay') ? options.loop_delay : 0);
         var overrideLoopMode = (options.hasOwnProperty('loop_mode') ? options.loop_mode : 'auto');
